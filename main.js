@@ -1,20 +1,20 @@
 function setup(){
 	
-	pinMode(0, INPUT);
-	pinMode(1, OUTPUT); // output bernilai HIGH dan LOW
+	pinMode(0, INPUT);  //merupakan input
+	pinMode(1, OUTPUT); // merupakan output
 	
 }
 
-function loop(){ // membuat sebuah kondisi
+function loop(){ // digunakan untuk menciptakan sebuah kondisi
 
-	var motion = digitalRead(0); // untuk mendeklarasikan motion sebagai inputan.
+	var motion = digitalRead(0); // digunakan untuk mendeklarasikan motion sebagai inputan.
 	Serial.println(motion); // mengeluarkan data motion.
 	
 	if (motion == 1023){ 
-		digitalWrite(1, HIGH) // jika terjadi gerakan dari cursor mouse maka akan menyalakan lampu.
+		digitalWrite(1, HIGH) // jika gerakan dari cursor mouse mendekatik sensor gerakan maka akan menyalakan pendingin udara.
 	}
 	
 	else {
-		digitalWrite(1, LOW); // jika tidak terdapat gerakan maka lampu akan mati.
+		digitalWrite(1, LOW); // jika tidak terjadi gerakan dari cursor mouse mendekati sensor gerakan maka pendingin udara akan mati.
 	}
 }
