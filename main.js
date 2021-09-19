@@ -11,7 +11,7 @@ function loop(){ // digunakan untuk menciptakan sebuah kondisi
 	Serial.println(motion); // mengeluarkan data motion.
 	
 	if (motion == 1023){ 
-		digitalWrite(1, HIGH) // jika gerakan dari cursor mouse mendekatik sensor gerakan maka akan menyalakan pendingin udara.
+		digitalWrite(1, HIGH) // jika gerakan dari cursor mouse mendekati sensor gerakan maka akan menyalakan pendingin udara.
 	}
 	
 	else {
